@@ -9,7 +9,13 @@ jobs:
       - name: Listing files
         run: |
           pwd
-          ls
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          git clone git@github:$GITHUB_REPOSITORY
+          git checkout $GITHUB_SHA
 
       - name: Checkout files
         uses: actions/checkout@v1
@@ -17,7 +23,7 @@ jobs:
       - name: Listing files after checking out
         run: |
           pwd
-          ls
+          ls -a
 
       - name: Simple Javascript Action
         id: simple-action
