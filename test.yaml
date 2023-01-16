@@ -1,0 +1,10 @@
+name: James
+age: 39
+address: "Ha Noi"
+active: true
+subjects:
+  math: 9
+  physics: 7
+  subkey:
+    key: value
+    key1: value1
